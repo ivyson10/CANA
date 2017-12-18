@@ -1,21 +1,30 @@
 #include <stdio.h>
 
-void insertionSort(int original[], int tam) {
-	int i, j, atual, cont = 0;
-
-	for (i = 1; i < tam; i++) {
-		atual = original[i];
-		
-
-		for (j = i - 1; (j >= 0) && (atual < original[j]); j--) {
-			original[j + 1] = original[j];
-			cont++;
+void shellSort(int vet[], int size) {
+    int i , j , value,cont=0;
+    int gap = 1;
+    while(gap < size) 
+    {
+        gap = 3*gap+1;
+    }
+    while ( gap > 1) 
+    {
+        gap /= 3;
+        for(i = gap; i < size; i++) 
+        {
+            value = vet[i];
+            j = i - gap;
+            while (j >= 0 && value < vet[j]) 
+            {
+                vet [j + gap] = vet[j];
+                j -= gap;
+            	
+            }
+            vet [j + gap] = value;
+            
         }
-
-		original[j+1] = atual;
-	}
-	printf("%d\n",cont);
-
+    }
+    printf("%d\n",gap );
 }
 int main()
 {
@@ -30,7 +39,7 @@ int main()
 		{
 			scanf("%d",&vet[i]);
 		}
-		insertionSort(vet,n);
+		shellSort(vet,n);
 
 	}
 	return 0;
