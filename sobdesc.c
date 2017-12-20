@@ -1,5 +1,7 @@
 #include <stdio.h>
-
+/* A ideia é simular uma partida mas armazenando a a posição dos jogadores em um vetor onde cada posição é um jogador, 
+e armazenar um vetor de escorregadores e escdas, depois se algum jogador chegar a 100 ignorar o resto das entradas de dados*/
+// Complexidade O(n)
 int main()
 {
 	int t;
