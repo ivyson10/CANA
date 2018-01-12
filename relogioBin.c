@@ -1,4 +1,7 @@
 #include <stdio.h>
+/*A ideia ´e simples eu pego a hora e os minutos divido pelos valores correspondentes se o valor tiver igual a 1 marco no relogio e pego o resto da divisao paa verificar o proximo  */
+//complexidade O(n)
+
 
 int main(int argc, char const *argv[])
 {
